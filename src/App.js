@@ -27,7 +27,7 @@ function App() {
       </div>
       <HeatMap />
       <HeatMap2 />
-      <div>
+      {/* <div>
         <div style={{ display: "flex" }}>
           <HighReact />
           <HighReact />
@@ -48,9 +48,18 @@ function App() {
           <HighReact />
           <HighReact />
         </div>
-      </div>
+      </div> */}
 
       <div className="grid-container">
+        <div className="grid-item">
+          <HighReact />
+        </div>
+        <div className="grid-item">
+          <HighReact />
+        </div>
+        <div className="grid-item">
+          <HighReact />
+        </div>
         <div className="grid-item">
           <HighReact />
         </div>
