@@ -8,85 +8,22 @@ import ColorAxis from "./hicharts/customHeatmap/ColorAxis";
 import HeatMap2 from "./hicharts/heatmap/HeatMap2";
 import HighReact from "./hicharts/miniHeatMap/HighReact";
 import "./App.css";
+import yearData from './hicharts/miniHeatMap/yearData'
+
+
 function App() {
+  const x = yearData()
+  console.log(x)
+  console.log(x[0].monthData[0].month,x[0].year)
   return (
     <div>
-      <div
-        style={{
-          display: "flex",
-          height: 350,
-          width: 500,
-          overflow: "hidden",
-        }}
-      >
-        <MyHeatMap />
-        <ColorAxis />
-
-        {/* {/ <Hicharts /> /} */}
-        {/* {/ <TempHeatmap /> } */}
-      </div>
-      <HeatMap />
-      <HeatMap2 />
-      {/* <div>
-        <div style={{ display: "flex" }}>
-          <HighReact />
-          <HighReact />
-          <HighReact />
-        </div>
-        <div style={{ display: "flex" }}>
-          <HighReact />
-          <HighReact />
-          <HighReact />
-        </div>
-        <div style={{ display: "flex" }}>
-          <HighReact />
-          <HighReact />
-          <HighReact />
-        </div>
-        <div style={{ display: "flex" }}>
-          <HighReact />
-          <HighReact />
-          <HighReact />
-        </div>
-      </div> */}
-
       <div className="grid-container">
-        <div className="grid-item">
-          <HighReact />
-        </div>
-        <div className="grid-item">
-          <HighReact />
-        </div>
-        <div className="grid-item">
-          <HighReact />
-        </div>
-        <div className="grid-item">
-          <HighReact />
-        </div>
-        <div className="grid-item">
-          <HighReact />
-        </div>
-        <div className="grid-item">
-          <HighReact />
-        </div>
-        <div className="grid-item">
-          <HighReact />
-        </div>
-        <div className="grid-item">
-          <HighReact />
-        </div>
-        <div className="grid-item">
-          <HighReact />
-        </div>
-        <div className="grid-item">
-          <HighReact />
-        </div>
-        <div className="grid-item">
-          <HighReact />
-        </div>
-        <div className="grid-item">
-          <HighReact />
-        </div>
+        
+        {x[0].monthData.map((value,index) => (
+          <div key={index} className="grid-item">
+            <HighReact config={value.chartData} month={value.month} year={x[0].year}/>
+          </div>
+        ))}
       </div>
     </div>
   );
