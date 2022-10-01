@@ -1,0 +1,26 @@
+/* @import "https://code.highcharts.com/css/highcharts.css";
+
+.highcharts-grid-line {
+    stroke-width: 0;
+    stroke: '';
+}
+
+/* Legend */
+/* .highcharts-legend-box {
+    fill: none;
+    stroke-width: 0;
+} */
+
+/* .highcharts-point-inactive {
+    opacity: 0.2;
+    transition: opacity 50ms; */
+    /* quick in */
+/* }  */
+
+/* 
+.highcharts-legend-series-active g.highcharts-series:not(.highcharts-series-hover),
+.highcharts-legend-point-active .highcharts-point:not(.highcharts-point-hover),
+.highcharts-legend-series-active .highcharts-markers:not(.highcharts-series-hover),
+.highcharts-legend-series-active .highcharts-data-labels:not(.highcharts-series-hover) {
+  opacity: 1;
+} */
