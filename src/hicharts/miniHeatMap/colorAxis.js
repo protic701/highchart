@@ -3,8 +3,8 @@ const ColorAxis ={
 
   gridLineWidth: 0,
     stops: [
-      [0, "#E6F3F7"],
-      [0.1, "#BEDFEC"],
+      [0, "#BEDFEC"],
+      [0.1, ""],
       [0.3, "#69B1CC"],
       [0.5, " #536CC5"],
       [1, "#F47954"],
@@ -17,7 +17,7 @@ const ColorAxis ={
       },
     },
     // dataClasses: [
-    //   {
+    //   {#FFFFFF
     //     from: 0,
     //     to: 9,
     //     color: "#E6F3F7",

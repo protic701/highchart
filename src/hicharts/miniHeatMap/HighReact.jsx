@@ -7,9 +7,10 @@ import tempdata from './ConfigHeatmap'
 function HighcgartReact({config,month,year}) {
 
   return (
+    
     <div
     style={{
-      height: 100,
+      height: 150,
       width: 84,
       overflow: "hidden",
     }}
