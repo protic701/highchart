@@ -3,11 +3,11 @@ import ColorAxis from "./colorAxis";
 const options = {
   chart: {
     type: "heatmap",
-    height: 200,
-    width: 100,
+    height: 450,
+    width: 450,
     marginBottom: 10,
     marginLeft: 0,
-    inverted: true,
+    // inverted: true,
   },
 
   title: {
@@ -17,26 +17,40 @@ const options = {
   },
 
   xAxis: {
-    gridLineWidth: 0,
-    height: 74,
-    lineWidth: 0,
-    visible: false,
-  },
-
-  yAxis: {
-    categories: ["", "", "", "", "", "", ""],
+    categories: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
     opposite: true,
     width: 84,
     gridLineWidth: 0,
-    title: {
-      enabled: true,
-      text: "Jan 2021",
-      style: {
-        fontWeight: "small",
-        fontSize: 8,
-      },
-    },
+    visible:false
   },
+
+  yAxis: {
+    height: 72,
+   
+    gridLineWidth: 0,
+    title: null,
+    reversed: true
+  },
+  // xAxis: {
+  //   gridLineWidth: 0,
+  // height: 74,
+  //   lineWidth: 0,
+  //   visible: false,
+  // },
+
+  // yAxis: {
+  //   opposite: true,
+  // width: 84,
+  //   gridLineWidth: 0,
+  //   title: {
+  //     enabled: true,
+  //     text: "Jan 2021",
+  //     style: {
+  //       fontWeight: "small",
+  //       fontSize: 8,
+  //     },
+  //   },
+  // },
   colorAxis: ColorAxis,
 
   legend: {
@@ -69,9 +83,9 @@ const options = {
             const chart = e.point.series.chart,
               series = e.point.series;
             const clickedSeriesIndex = e.point.index;
+            console.log(e.point.options)
             if (series.previousIndex === clickedSeriesIndex) {
               series.previousIndex = null;
-
               chart.series.forEach((series) => {
                 series.points.forEach((point) => {
                   point.graphic.css({
@@ -88,7 +102,8 @@ const options = {
                   if (point.index === clickedSeriesIndex)
                     point.graphic.css({
                       opacity: 1,
-                      stroke: point.color,
+                      // stroke: point.color,
+                      stroke: "#FFFFFF",
                       strokeWidth: 0,
                     });
                   else
